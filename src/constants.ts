@@ -1,6 +1,5 @@
-
-import { Court } from "./types/cardStack"
-import { StackTypes } from "./enums"
+import { Court } from './types/cardStack'
+import { StackTypes } from './enums'
 
 export const STACK_SIZE_LOOKUP: Record<StackTypes, number> = {
     [StackTypes.SMALL]: 6,

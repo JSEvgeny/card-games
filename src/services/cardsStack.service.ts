@@ -1,9 +1,8 @@
-import { CardStack, CardStackService, Court, Stack } from "types/cardStack"
-import { COURT_WEIGHT_LOOKUP } from "../constants"
-import { WEIGHT_COURT_LOOKUP } from "../constants"
-import { STACK_SIZE_LOOKUP } from "../constants"
-import { StackTypes } from "../enums"
-
+import { CardStack, CardStackService, Court, Stack } from 'types/cardStack'
+import { COURT_WEIGHT_LOOKUP } from '../constants'
+import { WEIGHT_COURT_LOOKUP } from '../constants'
+import { STACK_SIZE_LOOKUP } from '../constants'
+import { StackTypes } from '../enums'
 
 const getCardStack = (type: StackTypes): CardStack => {
     const stack: Stack = {

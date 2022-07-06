@@ -1,4 +1,4 @@
-import { Card, CardStack } from "types/cardStack"
+import { Card, CardStack } from 'types/cardStack'
 
 /**
  * Initial state of the Durak game,
@@ -14,10 +14,7 @@ const getSixRandomCards = (stack: CardStack) => {
     const randomSixCards = stack
         .map((card: Card, index: number) => (randomSixIndexes.includes(index) ? card : undefined))
         .filter((value: Card | undefined) => value !== undefined)
-    const filteredStack = stack.filter((stackCard: Card) =>
-        !randomSixCards.includes(
-            stackCard
-    ))
+    const filteredStack = stack.filter((stackCard: Card) => !randomSixCards.includes(stackCard))
 
     return [randomSixCards, filteredStack]
 }
@@ -31,7 +28,7 @@ const _getRandomUniqueIndexesFromRange = (start: number, end: number, count: num
         // Getting random index value
         const randomIndex: number = lookupArray[randomNumber]
         // Mutating array to prevent duplicates
-        lookupArray = lookupArray.filter(value => value != randomIndex)
+        lookupArray = lookupArray.filter((value) => value != randomIndex)
 
         randomIndexes = [...randomIndexes, randomIndex]
     }
