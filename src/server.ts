@@ -26,9 +26,10 @@ app.get('/', (req, res) => {
 
 app.get('/stack', (req, res) => {
     const initialStack = shuffle(getCardStack(StackTypes.SMALL))
-    const [randomSix, restStack] = getSixRandomCards(initialStack)
+    const [hand1, restStack1] = getSixRandomCards(initialStack)
+    const [hand2, restStack2] = getSixRandomCards(restStack1)
 
-    res.json({initialStack, randomSix, restStack})
+    res.json({initialStack, hand1, hand2, rest: restStack2})
 })
 
 app.listen(port, () => {
