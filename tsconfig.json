@@ -1,24 +1,22 @@
 {
-  "compilerOptions": {
-      "module": "commonjs",
-      "esModuleInterop": true,
-      "jsx": "react-jsx",
-      "strict": false,
-      "target": "es6",
-      "noImplicitAny": true,
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "outDir": "dist",
-      "baseUrl": ".",
-      "paths": {
-          "*": [
-              "node_modules/",
-              "src/types/*"
-          ]
-      }
-  },
-  "include": [
-      "src/**/*"
-  ],
-  "exclude": ["src/client/*"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react-jsx",
+        "target": "es6",
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ],
+            "types/*": ["src/types/*"]
+        }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["src/client/*"]
 }
