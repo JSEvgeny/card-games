@@ -10,7 +10,7 @@ const Main = () => {
         const data = await fetch('http://localhost:3000/stack')
         // convert data to json
         const json = await data.json()
-        const {hand1, hand2, rest} = json
+        const { hand1, hand2, rest } = json
 
         setHand1(hand1)
         setHand2(hand2)
@@ -27,22 +27,28 @@ const Main = () => {
 
             {hand1.length > 0 && (
                 <>
-                <h2>Player one has: </h2>
-                {hand1.map((card, index) => <span key={`hand_one_key_${index}`}>{card}</span>)}
+                    <h2>Player one has: </h2>
+                    {hand1.map((card, index) => (
+                        <span key={`hand_one_key_${index}`}>{card}</span>
+                    ))}
                 </>
             )}
 
             {hand2.length > 0 && (
                 <>
-                <h2>Player two has: </h2>
-                {hand2.map((card, index) => <span key={`hand_two_key_${index}`}>{card}</span>)}
+                    <h2>Player two has: </h2>
+                    {hand2.map((card, index) => (
+                        <span key={`hand_two_key_${index}`}>{card}</span>
+                    ))}
                 </>
             )}
 
             {rest.length > 0 && (
                 <>
-                <h2>Left in stack: </h2>
-                {rest.map((card, index) => <span key={`rest_key_${index}`}>{card}</span>)}
+                    <h2>Left in stack: </h2>
+                    {rest.map((card, index) => (
+                        <span key={`rest_key_${index}`}>{card}</span>
+                    ))}
                 </>
             )}
         </>

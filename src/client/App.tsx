@@ -1,9 +1,7 @@
-import Main from "./components/Main"
+import Main from './components/Main'
 
 const App = () => {
-    return (
-        <Main />
-    )
+    return <Main />
 }
 
 export default App
