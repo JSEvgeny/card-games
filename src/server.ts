@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 
 app.get('/stack', (req, res) => {
     const initialStack = shuffle(getCardStack(StackTypes.SMALL))
+    
     const [hand1, restStack1] = getSixRandomCards(initialStack)
     const [hand2, restStack2] = getSixRandomCards(restStack1)
 
